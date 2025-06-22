@@ -1,0 +1,50 @@
+<div class="feedback-container">
+    <h2>Send us Feedback</h2>
+    <form #feedbackForm="ngForm" (ngSubmit)="onSubmit()" class="feedback-form" *ngIf="!submitted">
+      <div class="form-group">
+        <input
+          type="text"
+          name="fullname"
+          placeholder="Full Name"
+          required
+          [(ngModel)]="feedback.fullname"
+          #fullname="ngModel"
+        />
+        <div *ngIf="fullname.invalid && (fullname.dirty || fullname.touched)" class="error">
+          Full name is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          required
+          email
+          [(ngModel)]="feedback.email"
+          #email="ngModel"
+        />
+         <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+          Please provide a valid email address.
+        </div>
+      </div>
+      <div class="form-group">
+        <textarea
+          name="feedback"
+          placeholder="Your Feedback"
+          required
+          [(ngModel)]="feedback.feedback"
+          #feedbackText="ngModel"
+        ></textarea>
+        <div *ngIf="feedbackText.invalid && (feedbackText.dirty || feedbackText.touched)" class="error">
+          Feedback is required.
+        </div>
+      </div>
+      <button type="submit" class="submit-btn" [disabled]="feedbackForm.invalid">Send Feedback</button>
+    </form>
+  
+    <div *ngIf="submitted" class="thank-you-message">
+      <h3>Thank you for your feedback!</h3>
+      <p>We appreciate you taking the time to share your thoughts with us.</p>
+    </div>
+  </div>

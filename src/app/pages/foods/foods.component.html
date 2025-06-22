@@ -1,0 +1,19 @@
+
+<div class="local-nav">
+  <a routerLink="/" class="nav-button">Back Home</a>
+  <a routerLink="/drinks" class="nav-button">Drinks Menu</a>
+</div>
+
+<div class="container">
+  <h1>Our Signature Dishes</h1>
+  <div class="menu-grid">
+    <div *ngFor="let food of foods" class="menu-item">
+      <img [src]="food.image" [alt]="food.name" class="item-image" />
+      <div class="item-info">
+        <div class="item-name">{{ food.name }}</div>
+        <div class="item-description">{{ food.description }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+

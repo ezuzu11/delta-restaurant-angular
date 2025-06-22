@@ -1,0 +1,59 @@
+/* Footer Styles */
+.footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ccc;
+  padding: 40px 0;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.footer-section {
+  padding: 20px;
+}
+
+.footer-section h2 {
+  color: #ffc107;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+.footer-section p {
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-info span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feedback-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffc107;
+  color: #333;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-btn:hover {
+  background-color: #e0a800;
+  text-decoration: none;
+}
